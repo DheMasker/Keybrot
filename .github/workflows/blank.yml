@@ -1,0 +1,17 @@
+      - name: Scaffold Android Project Files
+        run: |
+          mkdir -p app/src/main/java/com/example/asuskeyboard
+          mkdir -p app/src/main/res/drawable
+          mkdir -p app/src/main/res/layout
+          mkdir -p app/src/main/res/xml
+
+          cat << 'EOF' > settings.gradle.kts
+          ...
+          EOF
+
+          cat << 'EOF' > app/src/main/java/com/example/asuskeyboard/AsusStyleKeyboardService.kt
+          ...
+          EOF
+
+      - name: Build Debug APK
+        run: gradle assembleDebug
